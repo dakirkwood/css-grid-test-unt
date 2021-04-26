@@ -1,0 +1,584 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed:wght@500&display=swap");
+/* line 4, scss/_grid.scss */
+body.site {
+  display: grid;
+  grid-template-columns: 15rem 100%;
+  grid-template-areas: "express alert" "express masthead" "menu hero" "menu main" "menu footer";
+  overflow-x: hidden;
+  position: relative;
+  left: -15rem;
+  transition: left .6s; }
+  /* line 19, scss/_grid.scss */
+  body.site section#alert {
+    grid-area: alert; }
+  /* line 23, scss/_grid.scss */
+  body.site header#masthead {
+    grid-area: masthead;
+    position: relative; }
+    /* line 27, scss/_grid.scss */
+    body.site header#masthead button#mo-nav {
+      grid-area: masthead;
+      position: absolute;
+      right: 1rem;
+      z-index: 5;
+      top: 1.5rem; }
+  /* line 36, scss/_grid.scss */
+  body.site a#to-main {
+    grid-area: masthead; }
+  /* line 39, scss/_grid.scss */
+  body.site section#express {
+    grid-area: express;
+    display: grid; }
+  /* line 44, scss/_grid.scss */
+  body.site nav#main-nav {
+    grid-area: menu; }
+  /* line 48, scss/_grid.scss */
+  body.site section#hero {
+    grid-area: hero;
+    display: grid; }
+  /* line 53, scss/_grid.scss */
+  body.site main#main-content {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 75vw 1fr; }
+    /* line 58, scss/_grid.scss */
+    body.site main#main-content > * {
+      grid-column: 2/3; }
+    /* line 65, scss/_grid.scss */
+    body.site main#main-content section.news ul.cards li.card article {
+      display: grid;
+      grid-template-rows: 2rem auto;
+      grid-template-columns: 30% 70%;
+      grid-gap: .5rem;
+      margin: 1rem 0; }
+      /* line 72, scss/_grid.scss */
+      body.site main#main-content section.news ul.cards li.card article img {
+        grid-row: 2/3; }
+      /* line 75, scss/_grid.scss */
+      body.site main#main-content section.news ul.cards li.card article h2 {
+        grid-column: 1/3;
+        grid-rows: 1/2;
+        font-size: 1.125rem;
+        margin-top: 0; }
+      /* line 81, scss/_grid.scss */
+      body.site main#main-content section.news ul.cards li.card article p {
+        margin-top: 0;
+        font-size: .8125rem; }
+    /* line 88, scss/_grid.scss */
+    body.site main#main-content section.news ul.cards li.card:first-child article, body.site main#main-content section.news ul.cards li.card:nth-child(4n) article {
+      grid-template-columns: 1fr;
+      border-top: 1px solid darkgreen;
+      border-bottom: 1px solid darkgreen;
+      padding: 1.5rem 0;
+      margin: 1.5rem 0; }
+      /* line 95, scss/_grid.scss */
+      body.site main#main-content section.news ul.cards li.card:first-child article img, body.site main#main-content section.news ul.cards li.card:first-child article p, body.site main#main-content section.news ul.cards li.card:nth-child(4n) article img, body.site main#main-content section.news ul.cards li.card:nth-child(4n) article p {
+        grid-column: span 2; }
+      /* line 98, scss/_grid.scss */
+      body.site main#main-content section.news ul.cards li.card:first-child article h2, body.site main#main-content section.news ul.cards li.card:nth-child(4n) article h2 {
+        grid-row: 1/2;
+        margin-left: 0;
+        font-size: 1.5rem; }
+      /* line 103, scss/_grid.scss */
+      body.site main#main-content section.news ul.cards li.card:first-child article p, body.site main#main-content section.news ul.cards li.card:nth-child(4n) article p {
+        margin: .5rem 0;
+        font-size: 1rem;
+        line-height: 1.5rem; }
+  /* line 115, scss/_grid.scss */
+  body.site aside#sidebar,
+  body.site aside#dept-footer {
+    grid-column: 1/5; }
+  /* line 120, scss/_grid.scss */
+  body.site aside#dept-footer section.graphic-grid {
+    display: grid;
+    grid-template-rows: repeat(6, 10rem);
+    grid-template-rows: repeat(5, 10vw);
+    grid-gap: .75rem;
+    grid-template-areas: "b1 b5" "b2 b5" "b2 b3" "b2 b8" "b2 b8"; }
+    /* line 132, scss/_grid.scss */
+    body.site aside#dept-footer section.graphic-grid div.grid-block {
+      background-color: #ccc;
+      overflow: hidden;
+      position: relative;
+      padding: .5vw 0; }
+      /* line 138, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block img {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: -1vw; }
+      /* line 145, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b1 {
+        grid-area: b1; }
+      /* line 148, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b2 {
+        grid-area: b2; }
+      /* line 151, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b3 {
+        grid-area: b3; }
+      /* line 154, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b4 {
+        grid-area: b4;
+        display: none; }
+      /* line 158, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b5 {
+        grid-area: b5; }
+      /* line 161, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b6 {
+        grid-area: b6;
+        display: none; }
+      /* line 165, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b7 {
+        grid-area: b7;
+        display: none; }
+      /* line 169, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b8 {
+        grid-area: b8; }
+      /* line 172, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b9 {
+        grid-area: b9;
+        display: none; }
+      /* line 176, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b10 {
+        grid-area: b10;
+        display: none; }
+      /* line 180, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b11 {
+        grid-area: b11;
+        display: none; }
+      /* line 184, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b12 {
+        grid-area: b12;
+        display: none; }
+      /* line 188, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b13 {
+        grid-area: b13;
+        display: none; }
+  /* line 196, scss/_grid.scss */
+  body.site footer#campus-footer {
+    grid-area: footer; }
+  @media only screen and (min-width: 751px) and (max-width: 1049px) {
+    /* line 4, scss/_grid.scss */
+    body.site {
+      grid-template-columns: 15rem 75% 25%;
+      grid-template-areas: "express alert alert" "express masthead masthead" "menu hero hero" "menu main main" "menu footer footer"; }
+      /* line 210, scss/_grid.scss */
+      body.site main#main-content {
+        grid-template-columns: 1fr 85% 1fr; }
+        /* line 217, scss/_grid.scss */
+        body.site main#main-content section.news ul.cards li.card article {
+          grid-template-columns: 30% 70%;
+          margin: 1rem 0; }
+          /* line 221, scss/_grid.scss */
+          body.site main#main-content section.news ul.cards li.card article h2, body.site main#main-content section.news ul.cards li.card article p {
+            margin: .25rem 0 .75rem .75rem; }
+          /* line 225, scss/_grid.scss */
+          body.site main#main-content section.news ul.cards li.card article h2 {
+            grid-column: 1/3;
+            grid-row: 1/2;
+            margin-left: 0; }
+          /* line 231, scss/_grid.scss */
+          body.site main#main-content section.news ul.cards li.card article p {
+            grid-column: 2/3;
+            position: relative;
+            bottom: auto;
+            background-color: transparent;
+            margin-bottom: inherit;
+            margin-left: 0;
+            padding: 0; }
+      /* line 247, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid {
+        grid-column: 2/3; } }
+  @media only screen and (min-width: 901px) {
+    /* line 4, scss/_grid.scss */
+    body.site {
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas: "alert alert alert" "express express express" "masthead masthead masthead" "menu menu menu" "hero hero hero" "main main main" "footer footer footer";
+      left: 0;
+      overflow-x: visible; }
+      /* line 267, scss/_grid.scss */
+      body.site section#express {
+        display: grid;
+        grid-template-columns: 85vw 13vw; }
+        /* line 270, scss/_grid.scss */
+        body.site section#express nav#qlinks {
+          grid-column: 1/2; }
+        /* line 273, scss/_grid.scss */
+        body.site section#express section#search {
+          grid-column: 2/3; }
+      /* line 278, scss/_grid.scss */
+      body.site section#hero {
+        grid-template-columns: 1fr auto 1fr; }
+        /* line 281, scss/_grid.scss */
+        body.site section#hero img {
+          grid-column: 2/3; }
+      /* line 285, scss/_grid.scss */
+      body.site main#main-content {
+        grid-template-columns: 1fr 25% 60% 1fr;
+        grid-gap: 1rem; }
+        /* line 289, scss/_grid.scss */
+        body.site main#main-content section.text,
+        body.site main#main-content section.news {
+          grid-column: 3/4; }
+        /* line 295, scss/_grid.scss */
+        body.site main#main-content section.news ul.cards {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 1rem; }
+          /* line 302, scss/_grid.scss */
+          body.site main#main-content section.news ul.cards li.card article {
+            display: block; }
+          /* line 307, scss/_grid.scss */
+          body.site main#main-content section.news ul.cards li.card:first-child article {
+            margin-top: 0; }
+          /* line 312, scss/_grid.scss */
+          body.site main#main-content section.news ul.cards li.card:first-child, body.site main#main-content section.news ul.cards li.card:nth-child(4n) {
+            grid-column: span 2; }
+        /* line 320, scss/_grid.scss */
+        body.site main#main-content aside#sidebar {
+          grid-column: 2/3;
+          grid-row: 1/2; }
+      /* line 326, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid {
+        grid-column: 3/4;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 10vw);
+        grid-template-areas: "b1 b2 b3" "b4 b2 b5" "b4 b2 b5" "b6 b6 b7" "b8 b9 b7" "b8 b9 b7"; }
+        /* line 339, scss/_grid.scss */
+        body.site aside#dept-footer section.graphic-grid div.grid-block#b4, body.site aside#dept-footer section.graphic-grid div.grid-block#b6, body.site aside#dept-footer section.graphic-grid div.grid-block#b7, body.site aside#dept-footer section.graphic-grid div.grid-block#b9 {
+          display: block; } }
+  @media only screen and (min-width: 1300px) {
+    /* line 353, scss/_grid.scss */
+    body.site main#main-content section.text {
+      font-size: 1.125rem;
+      line-height: 2rem; }
+    /* line 358, scss/_grid.scss */
+    body.site main#main-content section.news ul.cards {
+      grid-template-columns: repeat(2, 1fr); }
+      /* line 363, scss/_grid.scss */
+      body.site main#main-content section.news ul.cards li.card article {
+        display: grid;
+        margin: .5rem 0;
+        grid-template-rows: auto auto; }
+        /* line 368, scss/_grid.scss */
+        body.site main#main-content section.news ul.cards li.card article h2 {
+          grid-row: 1/2;
+          grid-column: 1/3;
+          margin-bottom: 0; }
+        /* line 374, scss/_grid.scss */
+        body.site main#main-content section.news ul.cards li.card article p {
+          background: none;
+          padding: 0;
+          bottom: inherit;
+          position: relative; }
+      /* line 383, scss/_grid.scss */
+      body.site main#main-content section.news ul.cards li.card:first-child article {
+        margin-top: 0; }
+      /* line 388, scss/_grid.scss */
+      body.site main#main-content section.news ul.cards li.card:first-child, body.site main#main-content section.news ul.cards li.card:nth-child(4n) {
+        grid-row: span 3;
+        grid-column: span 1; }
+        /* line 393, scss/_grid.scss */
+        body.site main#main-content section.news ul.cards li.card:first-child article, body.site main#main-content section.news ul.cards li.card:nth-child(4n) article {
+          grid-column: unset;
+          border: none;
+          padding: 0;
+          margin: 0; }
+          /* line 399, scss/_grid.scss */
+          body.site main#main-content section.news ul.cards li.card:first-child article img, body.site main#main-content section.news ul.cards li.card:nth-child(4n) article img {
+            float: none;
+            max-width: none;
+            margin: 0; }
+          /* line 405, scss/_grid.scss */
+          body.site main#main-content section.news ul.cards li.card:first-child article h2, body.site main#main-content section.news ul.cards li.card:nth-child(4n) article h2 {
+            top: 0;
+            width: calc(100% - 2rem); }
+          /* line 410, scss/_grid.scss */
+          body.site main#main-content section.news ul.cards li.card:first-child article p, body.site main#main-content section.news ul.cards li.card:nth-child(4n) article p {
+            margin-left: 0;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid darkgreen; }
+    /* line 422, scss/_grid.scss */
+    body.site aside#dept-footer section.graphic-grid {
+      grid-column: 3/4;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(6, 10vw);
+      grid-template-areas: "b1 b2 b3 b3 b4" "b5 b2 b3 b3 b4" "b6 b7 b7 b8 b9" "b6 b7 b7 b8 b9" "b10 b10 b11 b8 b12" "b10 b10 b11 b13 b13"; }
+      /* line 435, scss/_grid.scss */
+      body.site aside#dept-footer section.graphic-grid div.grid-block#b10, body.site aside#dept-footer section.graphic-grid div.grid-block#b11, body.site aside#dept-footer section.graphic-grid div.grid-block#b12, body.site aside#dept-footer section.graphic-grid div.grid-block#b13 {
+        display: block; } }
+
+/* line 3, scss/_graphic-grid.scss */
+section.graphic-grid div.grid-block {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../img/ph-hero.jpg"); }
+  /* line 8, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b1 {
+    background-image: url(/GridTest/img/ph-hero.jpg); }
+  /* line 11, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b2 {
+    background-image: url("/GridTest/img/20_Spiriki_415.jpeg"); }
+  /* line 14, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b3 {
+    background-image: url(/GridTest/img/ph-hero.jpg); }
+  /* line 17, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b4 {
+    background-image: url("/GridTest/img/20_0304_Fall Stock0278.jpeg"); }
+  /* line 20, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b5 {
+    background-image: url("/GridTest/img/18_0804_UNT v FAU194.jpeg"); }
+  /* line 23, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b6 {
+    background-image: url(/GridTest/img/ph-hero.jpg); }
+  /* line 26, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b7 {
+    background-image: url("/GridTest/img/21_0080_Bluebonnet battle flag0057.jpeg"); }
+  /* line 29, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b8 {
+    background-image: url("/GridTest/img/19_0727_UNTFball_UTEP_2580_final.jpeg"); }
+  /* line 32, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b9 {
+    background-image: url(/GridTest/img/ph-hero.jpg); }
+  /* line 35, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b10 {
+    background-image: url("/GridTest/img/21_0051_campus beauty0015.jpeg"); }
+  /* line 38, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b11 {
+    background-image: url(/GridTest/img/ph-hero.jpg); }
+  /* line 41, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b12 {
+    background-image: url(/GridTest/img/ph-hero.jpg); }
+  /* line 44, scss/_graphic-grid.scss */
+  section.graphic-grid div.grid-block#b13 {
+    background-image: url("/GridTest/img/20_0304_Fall Stock0278.jpeg"); }
+
+/* line 8, scss/styles.scss */
+body.site {
+  color: #222;
+  margin: 0;
+  font-family: "Open Sans", sans-serif; }
+  /* line 13, scss/styles.scss */
+  body.site h1, body.site h2, body.site h3, body.site h4 {
+    font-family: 'Roboto Condensed', sans-serif;
+    column-span: all; }
+  /* line 17, scss/styles.scss */
+  body.site h1 {
+    font-size: 2rem; }
+  /* line 20, scss/styles.scss */
+  body.site h2 {
+    font-size: 1.75rem; }
+  /* line 23, scss/styles.scss */
+  body.site p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .9375rem;
+    line-height: 1.5rem; }
+  /* line 29, scss/styles.scss */
+  body.site section#alert,
+  body.site nav#main-nav,
+  body.site aside#sidebar,
+  body.site aside#dept-footer,
+  body.site footer#campus-footer {
+    padding: .5rem; }
+  /* line 37, scss/styles.scss */
+  body.site a#to-main {
+    color: #fff; }
+  /* line 40, scss/styles.scss */
+  body.site a#to-main:focus {
+    position: relative;
+    z-index: 5;
+    display: block; }
+  /* line 46, scss/styles.scss */
+  body.site section#alert {
+    background-color: darkorange; }
+    /* line 48, scss/styles.scss */
+    body.site section#alert h1 {
+      max-width: 75rem;
+      margin: auto;
+      text-align: center;
+      font-size: 1.125rem; }
+  /* line 57, scss/styles.scss */
+  body.site section#express button {
+    display: block;
+    margin: .75rem auto; }
+  /* line 62, scss/styles.scss */
+  body.site section#express section#search button {
+    background-color: darkgreen;
+    color: #fff;
+    padding: .5rem 1rem;
+    border: none;
+    outline: none; }
+  /* line 71, scss/styles.scss */
+  body.site section#express nav#qlinks ul {
+    display: none; }
+    /* line 73, scss/styles.scss */
+    body.site section#express nav#qlinks ul li {
+      list-style: none;
+      font-size: .625rem; }
+  /* line 81, scss/styles.scss */
+  body.site button#mo-nav,
+  body.site button#nomo-nav {
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    border: none;
+    height: 1.25rem; }
+    /* line 89, scss/styles.scss */
+    body.site button#mo-nav:focus,
+    body.site button#nomo-nav:focus {
+      outline: initial; }
+  /* line 93, scss/styles.scss */
+  body.site button#mo-nav {
+    background-color: black; }
+  /* line 96, scss/styles.scss */
+  body.site button#nomo-nav {
+    background-color: red;
+    border-radius: 3px;
+    position: absolute;
+    top: .25rem;
+    right: .25rem;
+    width: 1.25rem;
+    text-align: center; }
+  /* line 105, scss/styles.scss */
+  body.site header#masthead {
+    position: relative; }
+    /* line 108, scss/styles.scss */
+    body.site header#masthead img#head-logo {
+      max-width: 14rem;
+      transition: max-width .6s; }
+  /* line 113, scss/styles.scss */
+  body.site nav#main-nav {
+    position: relative; }
+    /* line 115, scss/styles.scss */
+    body.site nav#main-nav ul {
+      padding-left: 0;
+      margin: 0; }
+      /* line 119, scss/styles.scss */
+      body.site nav#main-nav ul li {
+        list-style: none;
+        padding: .125rem .6875rem;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1.375rem; }
+  /* line 127, scss/styles.scss */
+  body.site section#hero {
+    background-color: darkolivegreen;
+    position: relative;
+    display: block;
+    overflow-y: hidden;
+    padding: 20vw;
+    max-height: 25rem; }
+    /* line 134, scss/styles.scss */
+    body.site section#hero img {
+      width: 90vw;
+      position: absolute;
+      width: 100%;
+      top: -10vw;
+      left: 0; }
+  /* line 145, scss/styles.scss */
+  body.site main#main-content ul.cards {
+    padding-left: 0; }
+    /* line 149, scss/styles.scss */
+    body.site main#main-content ul.cards li.card {
+      list-style: none; }
+      /* line 153, scss/styles.scss */
+      body.site main#main-content ul.cards li.card img {
+        width: 100%;
+        height: auto; }
+      /* line 157, scss/styles.scss */
+      body.site main#main-content ul.cards li.card p {
+        font-size: .875rem;
+        line-height: 1.125rem; }
+  /* line 165, scss/styles.scss */
+  body.site main#main-content section.graphic-grid div.grid-block p {
+    text-align: center; }
+  /* line 177, scss/styles.scss */
+  body.site footer#campus-footer {
+    background-color: #222; }
+  @media only screen and (min-width: 751px) and (max-width: 1049px) {
+    /* line 189, scss/styles.scss */
+    body.site main#main-content section.news ul.cards li.card article p {
+      font-size: .875rem;
+      line-height: 1.5rem; } }
+  @media only screen and (min-width: 751px) {
+    /* line 203, scss/styles.scss */
+    body.site header#masthead img#head-logo {
+      max-width: 16rem; } }
+  @media only screen and (min-width: 901px) {
+    /* line 213, scss/styles.scss */
+    body.site section#express nav#qlinks button {
+      margin: 0;
+      display: none; }
+    /* line 219, scss/styles.scss */
+    body.site section#express section#search button {
+      margin-top: 0; }
+    /* line 224, scss/styles.scss */
+    body.site section#express nav#qlinks ul {
+      display: block;
+      text-align: right;
+      margin: .5rem 0 0 0; }
+      /* line 228, scss/styles.scss */
+      body.site section#express nav#qlinks ul li {
+        display: inline-block;
+        padding: .1875rem 1rem; }
+        /* line 234, scss/styles.scss */
+        body.site section#express nav#qlinks ul li:first-child {
+          padding-left: 0; }
+    /* line 242, scss/styles.scss */
+    body.site button#mo-nav,
+    body.site button#nomo-nav {
+      display: none;
+      visibility: hidden; }
+    /* line 248, scss/styles.scss */
+    body.site header#masthead img#head-logo {
+      position: absolute;
+      top: -4rem;
+      max-width: 16rem; }
+    /* line 255, scss/styles.scss */
+    body.site nav#main-nav {
+      border-bottom: 3px solid darkgreen; }
+      /* line 257, scss/styles.scss */
+      body.site nav#main-nav ul {
+        text-align: right; }
+        /* line 260, scss/styles.scss */
+        body.site nav#main-nav ul li {
+          display: inline-block;
+          font-size: 1.25rem; }
+    /* line 267, scss/styles.scss */
+    body.site aside#sidebar ul {
+      margin: 0;
+      padding: 0; }
+      /* line 272, scss/styles.scss */
+      body.site aside#sidebar ul li {
+        padding: 0; }
+        /* line 275, scss/styles.scss */
+        body.site aside#sidebar ul li ul {
+          padding-left: .25rem; }
+    /* line 282, scss/styles.scss */
+    body.site aside#sidebar ul.local-nav li {
+      list-style: none;
+      padding: .1875rem 1rem;
+      margin: .5rem 0; }
+      /* line 287, scss/styles.scss */
+      body.site aside#sidebar ul.local-nav li.active {
+        border-left: 2px solid darkgreen;
+        color: darkgreen;
+        font-weight: bold; } }
+  @media only screen and (min-width: 1300px) {
+    /* line 299, scss/styles.scss */
+    body.site header#masthead img#head-logo {
+      position: absolute;
+      top: -4rem;
+      max-width: 21rem; }
+    /* line 307, scss/styles.scss */
+    body.site nav#main-nav ul li {
+      font-size: 1.375rem; }
+    /* line 313, scss/styles.scss */
+    body.site main#main-content section.text {
+      column-count: 2;
+      column-gap: 2rem; }
+      /* line 317, scss/styles.scss */
+      body.site main#main-content section.text p {
+        margin-top: 0;
+        margin-bottom: 2rem; } }
+
+/*# sourceMappingURL=styles.css.map */

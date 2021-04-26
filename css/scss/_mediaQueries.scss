@@ -1,0 +1,27 @@
+// Scss Document
+// MEDIA QUERY MIXINS
+@mixin phone {
+	@media only screen and (min-width: #{$tiny_phone + 1px}) and (max-width: $phone) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media only screen and (min-width: #{$phone + 1px}) and (max-width: #{$desktop - 1px}) {
+		@content;
+	}
+}
+@mixin tablet_and_up {
+	@media only screen and (min-width: #{$phone + 1px}){
+		@content;
+	}
+}
+@mixin desktop {
+	@media only screen and (min-width: #{$tablet + 1px}) {
+		@content;
+	}
+}
+@mixin big_screen {
+	@media only screen and (min-width: $bigscreen) {
+		@content;
+	}
+}

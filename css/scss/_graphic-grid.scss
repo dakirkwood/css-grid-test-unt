@@ -1,0 +1,48 @@
+// Scss Document
+section.graphic-grid {
+	div.grid-block {
+		background-size: cover;
+		background-position: center;
+		background-image: url("../../img/ph-hero.jpg");
+		
+		&#b1{
+			background-image: url(/GridTest/img/ph-hero.jpg); 
+		}
+		&#b2{
+			background-image: url('/GridTest/img/20_Spiriki_415.jpeg'); 
+		}
+		&#b3{
+			background-image: url(/GridTest/img/ph-hero.jpg); 
+		}
+		&#b4{
+			background-image: url('/GridTest/img/20_0304_Fall Stock0278.jpeg'); 
+		}
+		&#b5{
+			background-image: url("/GridTest/img/18_0804_UNT v FAU194.jpeg"); 
+		}
+		&#b6{
+			background-image: url(/GridTest/img/ph-hero.jpg); 
+		}
+		&#b7{
+			background-image: url('/GridTest/img/21_0080_Bluebonnet battle flag0057.jpeg'); 
+		}
+		&#b8{
+			background-image: url('/GridTest/img/19_0727_UNTFball_UTEP_2580_final.jpeg'); 
+		}
+		&#b9{
+			background-image: url(/GridTest/img/ph-hero.jpg); 
+		}
+		&#b10{
+			background-image: url('/GridTest/img/21_0051_campus beauty0015.jpeg'); 
+		}
+		&#b11{
+			background-image: url(/GridTest/img/ph-hero.jpg); 
+		}
+		&#b12{
+			background-image: url(/GridTest/img/ph-hero.jpg); 
+		}
+		&#b13{
+			background-image: url("/GridTest/img/20_0304_Fall Stock0278.jpeg"); 
+		}
+	}
+}
