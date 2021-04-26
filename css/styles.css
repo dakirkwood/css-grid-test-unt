@@ -237,7 +237,7 @@ body.site {
         /* line 320, scss/_grid.scss */
         body.site main#main-content aside#sidebar {
           grid-column: 2/3;
-          grid-row: 1/2; }
+          grid-row: 1/3; }
       /* line 326, scss/_grid.scss */
       body.site aside#dept-footer section.graphic-grid {
         grid-column: 3/4;
